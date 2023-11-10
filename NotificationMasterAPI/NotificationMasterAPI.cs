@@ -43,10 +43,17 @@ namespace NotificationMasterAPI
         /// <summary>
         /// Displays tray notification. This function does not throws an exception or displays an error if NotificationMaster is not installed.
         /// </summary>
+        /// <param name="text">Text of tray notification</param>
+        /// <returns>Whether operation succeed.</returns>
+        public bool DisplayTrayNotification(string text) => DisplayTrayNotification(null, text);
+
+        /// <summary>
+        /// Displays tray notification. This function does not throws an exception or displays an error if NotificationMaster is not installed.
+        /// </summary>
         /// <param name="title">Title of tray notification</param>
         /// <param name="text">Text of tray notification</param>
         /// <returns>Whether operation succeed.</returns>
-        public bool DisplayTrayNotification(string title, string text)
+        public bool DisplayTrayNotification(string? title, string text)
         {
             Validate();
             try
