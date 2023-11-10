@@ -2,7 +2,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <Authors>NightmareXIV</Authors>
-        <Version>2.1.1.0</Version>
+        <Version>1.0.0.0</Version>
     </PropertyGroup>
 
     <PropertyGroup>
@@ -26,6 +26,12 @@
 
     <PropertyGroup>
         <DalamudLibPath>$(appdata)\XIVLauncher\addon\Hooks\dev\</DalamudLibPath>
+        <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+        <Title>Notification Master API</Title>
+        <Description>A library for convenient interacting with NotificationMaster Dalamud plugin. You can use it to display Windows toast notifications, play sounds, flash taskbar icon without need to use Windows API or complicated libraries.</Description>
+        <PackageProjectUrl>https://github.com/NightmareXIV/NotificationMasterAPI</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/NightmareXIV/NotificationMasterAPI</RepositoryUrl>
+        <PackageTags>Dalamud</PackageTags>
     </PropertyGroup>
 
     <ItemGroup>
