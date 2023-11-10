@@ -130,7 +130,7 @@ namespace NotificationMasterAPI
             Validate();
             try
             {
-                return PluginInterface.GetIpcSubscriber<bool>(NMAPINames.PlaySound).InvokeFunc();
+                return PluginInterface.GetIpcSubscriber<bool>(NMAPINames.StopSound).InvokeFunc();
             }
             catch (IpcNotReadyError)
             {
