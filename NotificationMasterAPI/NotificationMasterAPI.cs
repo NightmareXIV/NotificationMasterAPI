@@ -58,7 +58,7 @@ namespace NotificationMasterAPI
             Validate();
             try
             {
-                return PluginInterface.GetIpcSubscriber<string, string, bool>(NMAPINames.DisplayToastNotification).InvokeFunc(title, text);
+                return PluginInterface.GetIpcSubscriber<string, string, string, bool>(NMAPINames.DisplayToastNotification).InvokeFunc(PluginInterface.InternalName, title, text);
             }
             catch (IpcNotReadyError)
             {
@@ -75,7 +75,7 @@ namespace NotificationMasterAPI
             Validate();
             try
             {
-                return PluginInterface.GetIpcSubscriber<bool>(NMAPINames.FlashTaskbarIcon).InvokeFunc();
+                return PluginInterface.GetIpcSubscriber<string, bool>(NMAPINames.FlashTaskbarIcon).InvokeFunc(PluginInterface.InternalName);
             }
             catch (IpcNotReadyError)
             {
@@ -92,7 +92,7 @@ namespace NotificationMasterAPI
             Validate();
             try
             {
-                return PluginInterface.GetIpcSubscriber<bool>(NMAPINames.BringGameForeground).InvokeFunc();
+                return PluginInterface.GetIpcSubscriber<string, bool>(NMAPINames.BringGameForeground).InvokeFunc(PluginInterface.InternalName);
             }
             catch (IpcNotReadyError)
             {
@@ -113,7 +113,7 @@ namespace NotificationMasterAPI
             Validate();
             try
             {
-                return PluginInterface.GetIpcSubscriber<string, float, bool, bool, bool>(NMAPINames.PlaySound).InvokeFunc(pathOnDisk, volume, repeat, stopOnGameFocus);
+                return PluginInterface.GetIpcSubscriber<string, string, float, bool, bool, bool>(NMAPINames.PlaySound).InvokeFunc(PluginInterface.InternalName, pathOnDisk, volume, repeat, stopOnGameFocus);
             }
             catch (IpcNotReadyError)
             {
@@ -130,7 +130,7 @@ namespace NotificationMasterAPI
             Validate();
             try
             {
-                return PluginInterface.GetIpcSubscriber<bool>(NMAPINames.StopSound).InvokeFunc();
+                return PluginInterface.GetIpcSubscriber<string, bool>(NMAPINames.StopSound).InvokeFunc(PluginInterface.InternalName);
             }
             catch (IpcNotReadyError)
             {
