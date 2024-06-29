@@ -6,13 +6,13 @@ namespace NotificationMasterAPI
 {
     public class NotificationMasterApi
     {
-        DalamudPluginInterface PluginInterface;
+        IDalamudPluginInterface PluginInterface;
 
         /// <summary>
         /// Creates an instance of NotificationMaster API. You do not need to check if NotificationMaster plugin is installed.
         /// </summary>
         /// <param name="dalamudPluginInterface">Plugin interface reference</param>
-        public NotificationMasterApi(DalamudPluginInterface dalamudPluginInterface)
+        public NotificationMasterApi(IDalamudPluginInterface dalamudPluginInterface)
         {
             PluginInterface = dalamudPluginInterface;
         }
