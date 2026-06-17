@@ -14,5 +14,7 @@ namespace NotificationMasterAPI
         public const string BringGameForeground = "NotificationMasterAPI.BringGameForeground";
         public const string StopSound = "NotificationMasterAPI.StopSound";
         public const string Active = "NotificationMasterAPI.Active";
+        public const string IsGameWindowActivated = "NotificationMasterAPI.IsGameWindowActivated";
+        public const string SendHttpRequest = "NotificationMasterAPI.SendHttpRequest";
     }
 }
